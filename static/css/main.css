@@ -1,0 +1,90 @@
+h1 {
+  text-align: center;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: #333;
+  background-color: #ddd;
+}
+
+a {
+  color: #333;
+  text-decoration: underline;
+}
+
+label {
+  clear: both;
+  display: block;
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 0.8em 0 0.2em 0;
+  user-select: none;
+}
+
+input, button {
+  font-size: 1em;
+  padding: 3px 6px;
+  border: 1px solid #333;
+  border-radius: 3px 3px 3px 3px;
+  outline: 0;
+  box-shadow: none;
+}
+
+::-moz-focus-inner { 
+  padding: 0;
+  border: 0;
+}
+
+input {
+  width: 15em;
+  background-color: #fff;
+}
+
+button {
+  position: relative;
+  background-color: #aaa;
+  cursor: pointer;
+}
+
+.copied::after {
+  position: absolute;
+  top: 12%;
+  right: 110%;
+  display: block;
+  content: "copied";
+  font-size: 0.75em;
+  padding: 2px 3px;
+  color: #fff;
+  background-color: #22a;
+  border-radius: 3px;
+  opacity: 0;
+  will-change: opacity, transform;
+  animation: showcopied 1.5s ease;
+}
+
+.page {
+  text-align: center;
+}
+
+#submit {
+  position: relative;
+  background-color: #aaa;
+  cursor: pointer;
+  width: 8.5em;
+}
+
+@keyframes showcopied {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
