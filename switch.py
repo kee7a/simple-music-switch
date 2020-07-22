@@ -11,8 +11,6 @@ def main():
 
 @app.route('/', methods=['POST'])
 def change_music():
-	ip = request.remote_addr
-
 	if request.form['submit'] == 'spotify':
 		call(["systemctl stop plexamp.service"])
 		call(["systemctl start raspotify.service"])
